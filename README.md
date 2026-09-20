@@ -62,7 +62,7 @@ Supporting capabilities baked into the prototype:
 
 ## Current Status
 
-This repo contains a working **front-end prototype** (`gi1.html`) built as a single self-contained file, demonstrating the full citizen journey end-to-end with live Supabase-backed accounts:
+This repo contains a working **front-end prototype** (`index.html`) built as a single self-contained file, demonstrating the full citizen journey end-to-end with live Supabase-backed accounts:
 
 - All four counters are functional with real interaction flows (not static mockups).
 - Reports get real ticket IDs in `GI-YYYY-NNNNN` format.
@@ -72,11 +72,12 @@ This repo contains a working **front-end prototype** (`gi1.html`) built as a sin
 
 ## Getting Started
 
-1. Clone this repo and open `gi1.html` directly in a browser, or serve it with any static file server:
+1. Clone this repo and open `index.html` directly in a browser, or serve it with any static file server:
 
        npx serve .
 
-2. The app connects to a pre-configured Supabase project for auth/data. To point it at your own Supabase project instead, replace the `SUPABASE_URL` and `SUPABASE_ANON_KEY` constants near the top of the script section in `gi1.html`.
+   Since the file is named `index.html`, enabling **GitHub Pages** on this repo (Settings → Pages → source: root of `main`) will also serve it directly at a live demo URL.
+2. The app connects to a pre-configured Supabase project for auth/data. To point it at your own Supabase project instead, replace the `SUPABASE_URL` and `SUPABASE_ANON_KEY` constants near the top of the script section in `index.html`.
 3. **AI translation proxy:** deploy the `ai-proxy` Supabase Edge Function with an `ANTHROPIC_API_KEY` secret set — this keeps the Claude API key server-side rather than in the browser.
 4. **Gmail sign-in:** paste your own Google OAuth Client ID where prompted in the Report Issue panel (needed to send filed reports via the signer's Gmail account).
 
